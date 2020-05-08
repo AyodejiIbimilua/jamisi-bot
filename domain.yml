@@ -9,6 +9,7 @@ actions:
 - utter_goodbye
 - utter_greet
 - utter_iamabot
+- utter_rephrase_your_query
 - utter_subscribe
 - utter_welcome
 entities:
@@ -19,9 +20,9 @@ entities:
 - return_greet
 - source
 intents:
-- ask_news
 - affirm
 - greet
+- ask_news
 - deny
 - thanks
 - reply_greet
@@ -48,6 +49,9 @@ responses:
       news should I give you?
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_rephrase_your_query:
+  - text: '- text: Kindly rephrase your query for me to be able to give you better
+      results.'
   utter_subscribe:
   - text: You have been succesfully subscribed.
   utter_welcome:

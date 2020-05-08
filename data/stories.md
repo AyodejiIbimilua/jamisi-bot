@@ -6,11 +6,9 @@
 * thanks
   - utter_welcome
 
-
 ## bot challenge
 * bot_challenge
   - utter_iamabot
-
 
 ## story 1
 * greet
@@ -41,3 +39,19 @@
     - action_get_news
     - utter_did_that_help
 * affirm
+
+## interactive_story_1
+* greet
+    - utter_greet
+* ask_news{"query": "football"}
+    - slot{"query": "football"}
+    - action_get_news
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "football"}
+    - slot{"query": "football"}
+    - action_get_news
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help

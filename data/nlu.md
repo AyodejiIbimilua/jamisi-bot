@@ -6,6 +6,7 @@
 - good evening
 - hey there
 - hello jamisi
+- hiii
 
 ## intent:goodbye
 - bye
@@ -63,6 +64,13 @@
 - i want gist on [education](query) in [Nigeria](country)
 - Gist me about [Donald Trump](query)
 - i need news about [Drake](query)
+- I need news on [Barcelona](query)
+- i need news on [Drake](query)
+- i need updates about[ Jason Durello](query)
+- I need news on [epl matches](query)
+- I want news on [tech](category)
+- i need news on [football](query)
+- whats happening in [football](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -87,3 +95,9 @@
 ## intent:out_of_scope
 - i want yam
 - i want to fly
+
+## synonym:business
+- finance
+
+## synonym:technology
+- tech
