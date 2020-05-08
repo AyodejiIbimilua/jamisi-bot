@@ -3,3 +3,8 @@
 /.vscode
 
 /__pycache__
+
+*.dot
+*.db
+*.db-wal
+*.db-shm

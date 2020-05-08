@@ -1,32 +1,78 @@
+actions:
+- action_check_subscribe
+- action_get_news
+- action_subscribe
+- utter_anythingelse
+- utter_ask_subscribe
+- utter_did_that_help
+- utter_glad_to_help
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_subscribe
+- utter_welcome
+entities:
+- category
+- country
+- mood_great
+- query
+- return_greet
+- source
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+- ask_news
+- affirm
+- greet
+- deny
+- thanks
+- reply_greet
+- goodbye
+- ask_subscribe
+- ask_category
+- bot_challenge
+- out_of_scope
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  utter_anythingelse:
+  - text: Do you need anything else?
+  utter_ask_subscribe:
+  - text: Would you like to subscribe for daily news?
   utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Did that help you?
+  utter_glad_to_help:
+  - text: I'm glad I could help
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_greet:
+  - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
+      What would you want me to know?
+  - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
+      news should I give you?
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
+  utter_subscribe:
+  - text: You have been succesfully subscribed.
+  utter_welcome:
+  - text: Sure! Anytime
+  - text: You are welcome
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  category:
+    type: categorical
+    values:
+    - business
+    - entertainment
+    - general
+    - health
+    - science
+    - sports
+    - technology
+    - __other__
+  country:
+    type: text
+  query:
+    type: text
+  source:
+    type: text
+  subscribed:
+    type: bool
