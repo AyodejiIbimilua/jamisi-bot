@@ -7,6 +7,7 @@
 - hey there
 - hello jamisi
 - hiii
+- hey buddy
 
 ## intent:goodbye
 - bye
@@ -23,6 +24,9 @@
 - yes, it did.
 - yes, please
 - yeah
+- YES IT DID
+- YES
+- yes oo
 
 ## intent:deny
 - no
@@ -71,6 +75,11 @@
 - I want news on [tech](category)
 - i need news on [football](query)
 - whats happening in [football](query)
+- I NEED NEWS ON [CORONA VIRUS](query)
+- UPDATES ON [FUNKE AKINDELE](query)
+- i need [sports](category) news in [China](country)
+- What top stories is the [NY Times](source) running right now?
+- What news articles were published about the next [iphone](query) today?
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news

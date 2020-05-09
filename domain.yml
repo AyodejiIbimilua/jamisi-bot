@@ -4,6 +4,7 @@ actions:
 - action_subscribe
 - utter_anythingelse
 - utter_ask_subscribe
+- utter_ask_whatelse
 - utter_did_that_help
 - utter_glad_to_help
 - utter_goodbye
@@ -22,11 +23,11 @@ entities:
 intents:
 - affirm
 - greet
-- ask_news
-- deny
 - thanks
-- reply_greet
+- ask_news
 - goodbye
+- deny
+- reply_greet
 - ask_subscribe
 - ask_category
 - bot_challenge
@@ -36,6 +37,8 @@ responses:
   - text: Do you need anything else?
   utter_ask_subscribe:
   - text: Would you like to subscribe for daily news?
+  utter_ask_whatelse:
+  - text: What else would you like to do or know about?
   utter_did_that_help:
   - text: Did that help you?
   utter_glad_to_help:
@@ -44,13 +47,13 @@ responses:
   - text: Bye
   utter_greet:
   - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
-      What would you want me to know?
+      What news do you want to know about?
   - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
       news should I give you?
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_rephrase_your_query:
-  - text: '- text: Kindly rephrase your query for me to be able to give you better
+  - text: 'Kindly rephrase your query for me to be able to give you better
       results.'
   utter_subscribe:
   - text: You have been succesfully subscribed.
@@ -71,7 +74,6 @@ slots:
     - science
     - sports
     - technology
-    - __other__
   country:
     type: text
   query:
