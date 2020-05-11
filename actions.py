@@ -11,7 +11,8 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.
+from rasa_sdk.events import SlotSet
+from rasa_sdk.events import AllSlotsReset
 
 from newsapi import NewsApiClient
 
@@ -19,9 +20,9 @@ newsapi = NewsApiClient(api_key="aac1749d71c1403e9c3be7b474fc8e0f")
 
 
 
-country_list = [ae, ar, at, au, be, bg, br, ca, ch, cn, co, cu, cz, de, eg, fr, gb, gr, hk, gu
-id, ie, il, in, it, jp, kr, lt, lv, ma, mx, my, ng, nl, no, nz, ph, pl, pt, ro, rs, ru, sa, se,
-sg, si, sk, th, tr, tw, ua, us, ve, za]
+# country_list = [ae, ar, at, au, be, bg, br, ca, ch, cn, co, cu, cz, de, eg, fr, gb, gr, hk, gu
+# id, ie, il, in, it, jp, kr, lt, lv, ma, mx, my, ng, nl, no, nz, ph, pl, pt, ro, rs, ru, sa, se,
+# sg, si, sk, th, tr, tw, ua, us, ve, za]
 
 class ActionGetNews(Action):
 
@@ -37,16 +38,19 @@ class ActionGetNews(Action):
       
         values_dict = {"q":q, "source": source, "category": category,
         "country": country, "pageSize": 5}
-
+ 
         if source and (country or category):
+            values_dict["source"] = None
+            top_headlines = newsapi.get_top_headlines(**values_dict)
             dispatcher.utter_message(text="Here is what I found")
+            for i in range(0, 35):
+                dispatcher.utter_message(text=top_headlines["articles"][i]["title"])
+                dispatcher.utter_message(image=top_headlines["articles"][i]["urlToImage"])
+                dispatcher.utter_message(text=top_headlines["articles"][i]["description"])
+                dispatcher.utter_message(text="Read more here:" top_headlines["articles"][i]["url"])
+                dispatcher.utter_message(template="utter_urlToImage", url=top_headlines["articles"][i]["url"])
         else:
             top_headlines = newsapi.get_top_headlines(**values_dict)
             dispatcher.utter_message(text="Here is what I found")
 
-        
-
-        
-
-        return []
-
+        return [AllSlotsReset()]
