@@ -31,26 +31,61 @@ class ActionGetNews(Action):
 
     def run(self, dispatcher, tracker, domain):
 
-        q = tracker.get_slot("query")
+        query = tracker.get_slot("query")
         source = tracker.get_slot("source")
         category = tracker.get_slot("category")
         country = tracker.get_slot("country")
-      
-        values_dict = {"q":q, "source": source, "category": category,
-        "country": country, "pageSize": 5}
- 
+    
         if source and (country or category):
+            values_dict = {"q":query, "source": source, "category": category, "country": country}
             values_dict["source"] = None
             top_headlines = newsapi.get_top_headlines(**values_dict)
             dispatcher.utter_message(text="Here is what I found")
-            for i in range(0, 35):
-                dispatcher.utter_message(text=top_headlines["articles"][i]["title"])
-                dispatcher.utter_message(image=top_headlines["articles"][i]["urlToImage"])
-                dispatcher.utter_message(text=top_headlines["articles"][i]["description"])
-                dispatcher.utter_message(text="Read more here:" top_headlines["articles"][i]["url"])
-                dispatcher.utter_message(template="utter_urlToImage", url=top_headlines["articles"][i]["url"])
+            if top_headlines["totalResults"] > 5:
+                for i in range(0, 5):
+                    dispatcher.utter_message(text=top_headlines["articles"][i]["title"])
+                    dispatcher.utter_message(image=top_headlines["articles"][i]["urlToImage"])
+                    dispatcher.utter_message(text=top_headlines["articles"][i]["description"])
+                    dispatcher.utter_message(text="Read more here:"+ top_headlines["articles"][i]["url"])
+                    # dispatcher.utter_message(template="utter_urlToImage", url=top_headlines["articles"][i]["url"])
+            else:
+                for i in range(0, top_headlines["totalResults"]):
+                    dispatcher.utter_message(text=top_headlines["articles"][i]["title"])
+                    dispatcher.utter_message(image=top_headlines["articles"][i]["urlToImage"])
+                    dispatcher.utter_message(text=top_headlines["articles"][i]["description"])
+                    dispatcher.utter_message(text="Read more here:"+ top_headlines["articles"][i]["url"])
+                    dispatcher.utter_message(template="utter_urlToImage", url=top_headlines["articles"][i]["url"]) 
         else:
-            top_headlines = newsapi.get_top_headlines(**values_dict)
+            values_dict2 = {"q":query, "source": source, "category": category,
+            "country": country}
+            top_headlines2 = newsapi.get_top_headlines(**values_dict2)
             dispatcher.utter_message(text="Here is what I found")
+            
+            if top_headlines2["totalResults"] > 5:
+                for i in range(0, 5):
+                    dispatcher.utter_message(text=top_headlines2["articles"][i]["title"])
+                    dispatcher.utter_message(image=top_headlines2["articles"][i]["urlToImage"])
+                    dispatcher.utter_message(text=top_headlines2["articles"][i]["description"])
+                    dispatcher.utter_message(text="Read more here:"+ top_headlines2["articles"][i]["url"])
+                    # dispatcher.utter_message(template="utter_urlToImage", url=top_headlines2["articles"][i]["url"])
+            else:
+                for i in range(0, top_headlines["totalResults"]):
+                    dispatcher.utter_message(text=top_headlines2["articles"][i]["title"])
+                    dispatcher.utter_message(image=top_headlines2["articles"][i]["urlToImage"])
+                    dispatcher.utter_message(text=top_headlines2["articles"][i]["description"])
+                    dispatcher.utter_message(text="Read more here:"+ top_headlines2["articles"][i]["url"])
+                    dispatcher.utter_message(template="utter_urlToImage", url=top_headlines2["articles"][i]["url"])
 
-        return [AllSlotsReset()]
+        return [SlotSet("query", None)]
+
+class ActionSlotReset(Action):
+    def name(self):
+        return "action_slot_reset"
+
+    def run(self, dispatcher, tracker, domain):
+        return[
+            SlotSet("query", None),
+            SlotSet("category", None),
+            SlotSet("country", None),
+            SlotSet("source", None)
+        ]

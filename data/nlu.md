@@ -104,6 +104,7 @@
 ## intent:out_of_scope
 - i want yam
 - i want to fly
+- i want to book a taxi
 
 ## synonym:business
 - finance
