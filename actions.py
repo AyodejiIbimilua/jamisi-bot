@@ -18,12 +18,6 @@ from newsapi import NewsApiClient
 
 newsapi = NewsApiClient(api_key="aac1749d71c1403e9c3be7b474fc8e0f")
 
-
-
-# country_list = [ae, ar, at, au, be, bg, br, ca, ch, cn, co, cu, cz, de, eg, fr, gb, gr, hk, gu
-# id, ie, il, in, it, jp, kr, lt, lv, ma, mx, my, ng, nl, no, nz, ph, pl, pt, ro, rs, ru, sa, se,
-# sg, si, sk, th, tr, tw, ua, us, ve, za]
-
 class ActionGetNews(Action):
 
     def name(self):
@@ -57,7 +51,7 @@ class ActionGetNews(Action):
                     dispatcher.utter_message(template="utter_urlToImage", url=top_headlines["articles"][i]["url"]) 
         else:
             values_dict2 = {"q":query, "source": source, "category": category,
-            "country": country}
+            "country": country, "page_size":100}
             top_headlines2 = newsapi.get_top_headlines(**values_dict2)
             dispatcher.utter_message(text="Here is what I found")
             

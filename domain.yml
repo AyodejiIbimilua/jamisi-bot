@@ -1,0 +1,91 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm
+- greet
+- thanks
+- ask_news
+- goodbye
+- deny
+- reply_greet
+- ask_subscribe
+- ask_category
+- bot_challenge
+- out_of_scope
+entities:
+- category
+- country
+- mood_great
+- query
+- return_greet
+- source
+slots:
+  category:
+    type: categorical
+    values:
+    - business
+    - entertainment
+    - general
+    - health
+    - science
+    - sports
+    - technology
+  country:
+    type: text
+  query:
+    type: text
+  source:
+    type: text
+  subscribed:
+    type: bool
+responses:
+  utter_anythingelse:
+  - text: Do you need anything else?
+  utter_ask_subscribe:
+  - text: Would you like to subscribe for daily news?
+  utter_ask_whatelse:
+  - text: What else would you like to do or know about?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_glad_to_help:
+  - text: I'm glad I could help
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: "Hey! My name is Jamisi, I can give you gists as they happen around the\
+      \ world.\n What news do you want to know about?"
+  - text: "Hello, I am Jamisi, I can gist you about happenings arround the world.\
+      \ \n What news should I give you?"
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_rephrase_your_query:
+  - text: Kindly rephrase your query for me to be able to give you better results.
+  utter_subscribe:
+  - text: You have been succesfully subscribed.
+  utter_welcome:
+  - text: Sure! Anytime
+  - text: You are welcome
+  utter_url:
+  - text: 'Read more here: {url}'
+  utter_default:
+  - text: I am afraid I did'nt understand your request, please rephrase
+actions:
+- action_slot_reset
+- action_check_subscribe
+- action_get_news
+- action_subscribe
+- utter_anythingelse
+- utter_ask_subscribe
+- utter_ask_whatelse
+- utter_did_that_help
+- utter_glad_to_help
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_rephrase_your_query
+- utter_subscribe
+- utter_welcome
+- utter_url
+- action_default_fallback
+- utter_default

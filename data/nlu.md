@@ -14,6 +14,8 @@
 - goodbye
 - see you around
 - see you later
+- see you some other time
+- Talk to you later
 
 ## intent:affirm
 - yes
@@ -24,8 +26,8 @@
 - yes, it did.
 - yes, please
 - yeah
-- YES IT DID
-- YES
+- Yes, it did
+- sure
 - yes oo
 
 ## intent:deny
@@ -46,7 +48,7 @@
 - Give me latest news about [bitcoin](query)
 - Give me latest news about [corona virus](query)
 - news about [microsoft](query)
-- updates about [Borris Johnson](query)
+- updates about [Boris Johnson](query)
 - I need to hear about [amazon](query)
 - Get me news from [BBC](source)
 - I want news from [Vanguard](source)
@@ -63,51 +65,93 @@
 - Give me [sports news](category)
 - news in [tech](category)
 - news in [science world](category)
-- in the [health sector](category)
+- news in the [health sector](category)
 - get me some news in [finance](category)
-- i want gist on [education](query) in [Nigeria](country)
+- I want gist on [education](query) in [Nigeria](country)
 - Gist me about [Donald Trump](query)
-- i need news about [Drake](query)
+- I need news about [Drake](query)
 - I need news on [Barcelona](query)
 - i need news on [Drake](query)
-- i need updates about[ Jason Durello](query)
+- i need updates about[Jason Durello](query)
 - I need news on [epl matches](query)
 - I want news on [tech](category)
-- i need news on [football](query)
+- I need news on [football](query)
 - whats happening in [football](query)
-- I NEED NEWS ON [CORONA VIRUS](query)
-- UPDATES ON [FUNKE AKINDELE](query)
-- i need [sports](category) news in [China](country)
+- I need updates on [corona virus](query)
+- Updaes on [FUNKE AKINDELE](query)
+- I need [sports](category) news in [China](country)
 - What top stories is the [NY Times](source) running right now?
 - What news articles were published about the next [iphone](query) today?
+- Can you please give me some [technology news](category)?
+- I want some [business news](category)
+- Give me news about money [heist](query)
+- Any information about [ISIS](query)
+- Whats going on in the [white house](query)
+- I need some news in the [entertainment industry](category) of [Nigeria](country)
+- I need some [entertaiment news](category)
+- Give me some [health news](category)
+- I want news about [science](category)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
 - Please subscribe me
 - Can you please subscribe me
+- Subscribe me, please
 
 ## intent:thanks
-- thanks
+- Thanks
 - I appreciate
 - Merci
 - Thank you
 - yes, thanks.
+- Thank you very much
+- Thank you so much
+- Thanks a bunch
+- Thanks a ton
 
 ## intent:ask_category
 - What category can you get me news
 - from what category can i choose from
+- What sections of news do you offer
 
 ## intent:reply_greet
 - [I am good](mood_great), [what about you?](return_greet)
 - [I'am good](mood_great), [you?](return_greet)
 
 ## intent:out_of_scope
-- i want yam
-- i want to fly
-- i want to book a taxi
+- I want to book a taxi
+- I want to order for pizza
+- What cusine do you have
+- How many wives do you have
 
 ## synonym:business
 - finance
+- business news
+- business world
 
 ## synonym:technology
 - tech
+- tech news
+- technology news
+
+## synonym:science
+- sciences
+- science news
+
+## synonym:sport
+- sports
+- sport news
+- sports news
+
+## synonym:general
+- general news
+
+## synonym:entertainment
+- entertainment news
+- celebrity
+- celebrities
+- entertainment industry
+- entertainment industries
+
+## synonym:health
+- health news
