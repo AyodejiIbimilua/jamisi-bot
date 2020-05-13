@@ -83,3 +83,19 @@ class ActionSlotReset(Action):
             SlotSet("country", None),
             SlotSet("source", None)
         ]
+
+
+import requests
+
+url = "https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/search"
+
+querystring = {"q":"Robert T Kiyosaki", "mkt":"en-US"}
+
+headers = {
+    'x-rapidapi-host': "microsoft-azure-bing-news-search-v1.p.rapidapi.com",
+    'x-rapidapi-key': "62f069db3amsh7a4af5f3cb21c69p1ddf82jsn30dd7882d4a8"
+    }
+
+response = requests.request("GET", url, headers=headers, params=querystring)
+
+print(response.text)
