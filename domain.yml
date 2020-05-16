@@ -1,6 +1,7 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
 intents:
 - affirm
 - greet
@@ -13,6 +14,7 @@ intents:
 - ask_category
 - bot_challenge
 - out_of_scope
+
 entities:
 - category
 - country
@@ -20,25 +22,13 @@ entities:
 - query
 - return_greet
 - source
+
 slots:
-  category:
-    type: categorical
-    values:
-    - business
-    - entertainment
-    - general
-    - health
-    - science
-    - sports
-    - technology
-  country:
-    type: text
   query:
-    type: text
-  source:
     type: text
   subscribed:
     type: bool
+
 responses:
   utter_anythingelse:
   - text: Do you need anything else?
@@ -70,6 +60,8 @@ responses:
   - text: 'Read more here: {url}'
   utter_default:
   - text: I am afraid I did'nt understand your request, please rephrase
+
+
 actions:
 - action_slot_reset
 - action_check_subscribe
