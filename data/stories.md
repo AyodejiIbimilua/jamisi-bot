@@ -12,6 +12,7 @@
 
 ## asknews
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -28,6 +29,7 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -49,6 +51,7 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -58,6 +61,7 @@
 * affirm
   - utter_ask_whatelse
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -79,12 +83,14 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
 * deny
   - utter_rephrase_your_query
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -106,12 +112,14 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
 * deny
   - utter_rephrase_your_query
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -121,6 +129,7 @@
 * affirm
   - utter_ask_whatelse
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -142,6 +151,7 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -160,6 +170,7 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -169,6 +180,7 @@
 * affirm
   - utter_ask_whatelse
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -187,12 +199,14 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
 * deny
   - utter_rephrase_your_query
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -212,12 +226,14 @@
 * greet
   - utter_greet
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
 * deny
   - utter_rephrase_your_query
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -227,6 +243,7 @@
 * affirm
   - utter_ask_whatelse
 * ask_news{"query": "Christmas"}
+  - slot{"query": "Christmas"}
   - action_get_news
   - action_slot_reset
   - utter_did_that_help
@@ -245,6 +262,7 @@
 * greet
     - utter_greet
 * ask_news{"query": "CORONA VIRUS"}
+    - slot{"query": "CORONA VIRUS"}
     - action_get_news
     - action_slot_reset
     - utter_did_that_help
@@ -254,12 +272,14 @@
 * affirm
     - utter_ask_whatelse
 * ask_news{"query": "FUNKE AKINDELE"}
+    - slot{"query": "FUNKE AKINDELE"}
     - action_get_news
     - action_slot_reset
     - utter_did_that_help
 * deny
     - utter_rephrase_your_query
-* ask_news{"category": "sports", "country": "China"}
+* ask_news{"query": "Yaradua"}
+    - slot{"query": "Yaradua"
     - action_get_news
     - action_slot_reset
     - utter_did_that_help
