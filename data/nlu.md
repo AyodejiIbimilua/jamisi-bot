@@ -91,12 +91,14 @@
 - I need some [entertaiment news](query)
 - Give me some [health news](query)
 - I want news about [science](query)
+- Give me news about [laptops][query]
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
 - Please subscribe me
 - Can you please subscribe me
 - Subscribe me, please
+- I would like to subscribe
 
 ## intent:thanks
 - Thanks
@@ -123,6 +125,8 @@
 - I want to order for pizza
 - What cusine do you have
 - How many wives do you have
+- I want to fry yam
+- Get me some water
 
 ## synonym:business
 - finance
