@@ -26,7 +26,7 @@ entities:
 slots:
   query:
     type: text
-  subscribed:
+  subscribed: 
     type: bool
 
 responses:
@@ -58,6 +58,10 @@ responses:
   - text: You are welcome
   utter_url:
   - text: 'Read more here: {url}'
+  utter_ask_affirmation:
+  - text: Did you mean?
+  utter_ask_rephrase:
+  - text: I am afraid I did'nt understand your request, please rephrase
   utter_default:
   - text: I am afraid I did'nt understand your request, please rephrase
 

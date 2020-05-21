@@ -128,6 +128,25 @@
 - I want to fry yam
 - Get me some water
 
+## intent: chitchat/compliment
+- You're such a darling
+- You are a darling
+- You are awesome
+- You're lovely
+- You are smart
+- You're intelligent
+
+## intent: chitchat/who_are_you
+- Who are you?
+- Are you a bot?
+- Tell me about yourself
+- Tell me about you
+
+## intent: chitchat/who_made_you
+- Who made you?
+- Who created you?
+- Who built you?
+
 ## synonym:business
 - finance
 - business news
