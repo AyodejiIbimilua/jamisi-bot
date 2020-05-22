@@ -31,4 +31,4 @@ policies:
     core_threshold: 0.4
     fallback_core_action_name: "action_default_fallback"
     fallback_nlu_action_name: "action_default_fallback"
-    deny_suggesttion_intent_name: "out_of_scope"
+    deny_suggestion_intent_name: "out_of_scope"

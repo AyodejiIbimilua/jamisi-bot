@@ -17,6 +17,10 @@
   - action_slot_reset
   - utter_did_that_help
 
+## chitchat
+* chitchat
+  - respond_chitchat
+
 ## bot challenge
 * bot_challenge
   - utter_iamabot
@@ -279,7 +283,7 @@
 * deny
     - utter_rephrase_your_query
 * ask_news{"query": "Yaradua"}
-    - slot{"query": "Yaradua"
+    - slot{"query": "Yaradua"}
     - action_get_news
     - action_slot_reset
     - utter_did_that_help

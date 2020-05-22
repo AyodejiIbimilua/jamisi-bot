@@ -135,6 +135,7 @@
 - You're lovely
 - You are smart
 - You're intelligent
+- You're beautiful
 
 ## intent: chitchat/who_are_you
 - Who are you?
@@ -146,6 +147,13 @@
 - Who made you?
 - Who created you?
 - Who built you?
+
+## intent: chitchat/insult
+- You're stupid
+- You're mad
+- You're crazy
+- You're a fool
+- You are dumb
 
 ## synonym:business
 - finance

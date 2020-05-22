@@ -1,7 +1,6 @@
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
 - affirm
 - greet
@@ -14,7 +13,11 @@ intents:
 - ask_category
 - bot_challenge
 - out_of_scope
-
+- chitchat
+- chitchat/compliment
+- chitchat/who_are_you
+- chitchat/who_made_you
+- chitchat/insult
 entities:
 - category
 - country
@@ -22,13 +25,11 @@ entities:
 - query
 - return_greet
 - source
-
 slots:
   query:
     type: text
-  subscribed: 
+  subscribed:
     type: bool
-
 responses:
   utter_anythingelse:
   - text: Do you need anything else?
@@ -43,10 +44,10 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_greet:
-  - text: "Hey! My name is Jamisi, I can give you gists as they happen around the\
-      \ world.\n What news do you want to know about?"
-  - text: "Hello, I am Jamisi, I can gist you about happenings arround the world.\
-      \ \n What news should I give you?"
+  - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
+      What news do you want to know about?"
+  - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
+      news should I give you?"
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_rephrase_your_query:
@@ -57,15 +58,13 @@ responses:
   - text: Sure! Anytime
   - text: You are welcome
   utter_url:
-  - text: 'Read more here: {url}'
+  - text: Read more here:\ {url}
   utter_ask_affirmation:
   - text: Did you mean?
   utter_ask_rephrase:
   - text: I am afraid I did'nt understand your request, please rephrase
   utter_default:
   - text: I am afraid I did'nt understand your request, please rephrase
-
-
 actions:
 - action_slot_reset
 - action_check_subscribe
@@ -85,3 +84,6 @@ actions:
 - utter_url
 - action_default_fallback
 - utter_default
+- respond_chitchat
+- utter_ask_affirmation
+- utter_ask_rephrase

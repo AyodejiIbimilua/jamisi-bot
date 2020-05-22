@@ -67,3 +67,23 @@ class ActionSlotReset(Action):
         return[
             SlotSet("query", None)
         ]
+
+class ActionSubscribe(Action):
+    def name(self):
+        return "action_subscribe"
+
+    def run(self, dispatcher, tracker, domain):
+
+        dispatcher.utter_message(text="You have been succesfully subscribed to my daily news.")
+        return[]
+
+class ActionCheckSubscribe(Action):
+    def name(self):
+        return "action_check_subscribe"
+
+    def run(self, dispatcher, tracker, domain):
+
+        subscribed = False
+        return[
+            SlotSet("subscribed", subscribed)
+        ]
