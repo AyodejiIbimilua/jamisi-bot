@@ -16,6 +16,7 @@
 - see you later
 - see you some other time
 - Talk to you later
+- ok bye
 
 ## intent:affirm
 - yes
@@ -92,6 +93,9 @@
 - Give me some [health news](query)
 - I want news about [science](query)
 - Give me news about [laptops][query]
+- Give me updates about [brazil](query)
+- I want newws about [Jide Kosoko](query)
+- Give me updates on [Larry Page](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -99,6 +103,7 @@
 - Can you please subscribe me
 - Subscribe me, please
 - I would like to subscribe
+- Subdcribe me for news update
 
 ## intent:thanks
 - Thanks
@@ -128,7 +133,7 @@
 - I want to fry yam
 - Get me some water
 
-## intent: chitchat/compliment
+## intent:chitchat/compliment
 - You're such a darling
 - You are a darling
 - You are awesome
@@ -136,34 +141,49 @@
 - You are smart
 - You're intelligent
 - You're beautiful
+- You're sweet
 
-## intent: chitchat/who_are_you
+## intent:chitchat/who_are_you
 - Who are you?
 - Are you a bot?
 - Tell me about yourself
 - Tell me about you
 
-## intent: chitchat/who_made_you
+## intent:chitchat/who_made_you
 - Who made you?
 - Who created you?
 - Who built you?
 
-## intent: chitchat/insult
+## intent:chitchat/insult
 - You're stupid
 - You're mad
 - You're crazy
 - You're a fool
 - You are dumb
 
+## intent:chitchat
+- You're mad o
+- That's why I love you
+- You are sweet
+- Who made you?
+
 ## synonym:business
 - finance
 - business news
 - business world
 
-## synonym:technology
-- tech
-- tech news
-- technology news
+## synonym:entertainment
+- entertainment news
+- celebrity
+- celebrities
+- entertainment industry
+- entertainment industries
+
+## synonym:general
+- general news
+
+## synonym:health
+- health news
 
 ## synonym:science
 - sciences
@@ -174,15 +194,7 @@
 - sport news
 - sports news
 
-## synonym:general
-- general news
-
-## synonym:entertainment
-- entertainment news
-- celebrity
-- celebrities
-- entertainment industry
-- entertainment industries
-
-## synonym:health
-- health news
+## synonym:technology
+- tech
+- tech news
+- technology news

@@ -1,23 +1,25 @@
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
-intents:
-- affirm
-- greet
-- thanks
-- ask_news
-- goodbye
-- deny
-- reply_greet
-- ask_subscribe
-- ask_category
-- bot_challenge
-- out_of_scope
-- chitchat
-- chitchat/compliment
-- chitchat/who_are_you
-- chitchat/who_made_you
-- chitchat/insult
+actions:
+- action_check_subscribe
+- action_default_fallback
+- action_get_news
+- action_slot_reset
+- action_subscribe
+- respond_chitchat
+- utter_anythingelse
+- utter_ask_affirmation
+- utter_ask_rephrase
+- utter_ask_subscribe
+- utter_ask_whatelse
+- utter_default
+- utter_did_that_help
+- utter_glad_to_help
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_rephrase_your_query
+- utter_subscribe
+- utter_url
+- utter_welcome
 entities:
 - category
 - country
@@ -25,18 +27,36 @@ entities:
 - query
 - return_greet
 - source
-slots:
-  query:
-    type: text
-  subscribed:
-    type: bool
+intents:
+- chitchat
+- ask_news
+- goodbye
+- ask_subscribe
+- greet
+- affirm
+- thanks
+- deny
+- reply_greet
+- ask_category
+- bot_challenge
+- out_of_scope
+- chitchat/compliment
+- chitchat/who_are_you
+- chitchat/who_made_you
+- chitchat/insult
 responses:
   utter_anythingelse:
   - text: Do you need anything else?
+  utter_ask_affirmation:
+  - text: Did you mean?
+  utter_ask_rephrase:
+  - text: I am afraid I did'nt understand your request, please rephrase
   utter_ask_subscribe:
   - text: Would you like to subscribe for daily news?
   utter_ask_whatelse:
   - text: What else would you like to do or know about?
+  utter_default:
+  - text: I am afraid I did'nt understand your request, please rephrase
   utter_did_that_help:
   - text: Did that help you?
   utter_glad_to_help:
@@ -54,36 +74,16 @@ responses:
   - text: Kindly rephrase your query for me to be able to give you better results.
   utter_subscribe:
   - text: You have been succesfully subscribed.
+  utter_url:
+  - text: Read more here:\ {url}
   utter_welcome:
   - text: Sure! Anytime
   - text: You are welcome
-  utter_url:
-  - text: Read more here:\ {url}
-  utter_ask_affirmation:
-  - text: Did you mean?
-  utter_ask_rephrase:
-  - text: I am afraid I did'nt understand your request, please rephrase
-  utter_default:
-  - text: I am afraid I did'nt understand your request, please rephrase
-actions:
-- action_slot_reset
-- action_check_subscribe
-- action_get_news
-- action_subscribe
-- utter_anythingelse
-- utter_ask_subscribe
-- utter_ask_whatelse
-- utter_did_that_help
-- utter_glad_to_help
-- utter_goodbye
-- utter_greet
-- utter_iamabot
-- utter_rephrase_your_query
-- utter_subscribe
-- utter_welcome
-- utter_url
-- action_default_fallback
-- utter_default
-- respond_chitchat
-- utter_ask_affirmation
-- utter_ask_rephrase
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  query:
+    type: text
+  subscribed:
+    type: bool

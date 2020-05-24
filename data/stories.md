@@ -297,3 +297,47 @@
     - utter_welcome
 * goodbye
     - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* ask_news{"query": "brazil"}
+    - slot{"query": "brazil"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query": null}
+    - utter_did_that_help
+* affirm
+    - utter_anythingelse
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* ask_news{"query": "Jide Kosoko"}
+    - slot{"query": "Jide Kosoko"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query": null}
+    - utter_did_that_help
+* chitchat
+    - respond_chitchat
+* goodbye
+    - utter_goodbye
+* ask_subscribe
+    - action_subscribe
+* chitchat
+    - respond_chitchat
+
+## interactive_story_1
+* ask_news{"query": "Larry Page"}
+    - slot{"query": "Larry Page"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query": null}
+    - utter_did_that_help
+* goodbye
+    - utter_goodbye
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
