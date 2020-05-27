@@ -1,272 +1,72 @@
 ## greet
 * greet
-  - utter_greet
+    - utter_greet
 
 ## goodbye
 * goodbye
-  - utter_goodbye
+    - utter_goodbye
 
 ## thanks
 * thanks
-  - utter_welcome
-
-## asknews
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
+    - utter_welcome
 
 ## chitchat
 * chitchat
-  - respond_chitchat
+    - respond_chitchat
 
 ## bot challenge
 * bot_challenge
-  - utter_iamabot
+    - utter_iamabot
 
+## okay
+* okay
+    - utter_okay
 ## out of scope
 * out_of_scope
-  - action_default_fallback
+    - action_default_fallback
+* out_of_scope
+    - action_default_fallback
+* out_of_scope
+    - utter_help_message
 
-## happy path + satisfied + nothing else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": false}
-  - slot{"subscribed": false}
-  - utter_ask_subscribe
-* affirm
-  - action_subscribe
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## happy path + satisfied + something else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* affirm
-  - utter_ask_whatelse
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": false}
-  - slot{"subscribed": false}
-  - utter_ask_subscribe
-* affirm
-  - action_subscribe
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## sad path + not satisfied + nothing else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* deny
-  - utter_rephrase_your_query
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": false}
-  - slot{"subscribed": false}
-  - utter_ask_subscribe
-* affirm
-  - action_subscribe
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## sad path + not satisfied + something else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* deny
-  - utter_rephrase_your_query
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* affirm
-  - utter_ask_whatelse
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": false}
-  - slot{"subscribed": false}
-  - utter_ask_subscribe
-* affirm
-  - action_subscribe
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## happy path + satisfied + nothing else + subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": true}
-  - slot{"subscribed": true}
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## happy path + satisfied + something else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* affirm
-  - utter_ask_whatelse
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": true}
-  - slot{"subscribed": true}
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## sad path + not satisfied + nothing else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* deny
-  - utter_rephrase_your_query
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": true}
-  - slot{"subscribed": true}
-  - utter_ask_subscribe
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## sad path + not satisfied + something else + non subscriber
-* greet
-  - utter_greet
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* deny
-  - utter_rephrase_your_query
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* affirm
-  - utter_ask_whatelse
-* ask_news{"query": "Christmas"}
-  - slot{"query": "Christmas"}
-  - action_get_news
-  - action_slot_reset
-  - utter_did_that_help
-* affirm
-  - utter_glad_to_help
-  - utter_anythingelse
-* deny
-  - action_check_subscribe{"subscribed": true}
-  - slot{"subscribed": true}
-* thanks
-  - utter_welcome
-* goodbye
-  - utter_goodbye
-
-## interactive_story_1
+## Ask news without query
 * greet
     - utter_greet
-* ask_news{"query": "CORONA VIRUS"}
-    - slot{"query": "CORONA VIRUS"}
+* ask_news
+    - utter_ask_topic
+* inform{"query": "Obama"}
+    - slot{"query": "Obama"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## Ask news without query 2
+* greet
+    - utter_greet
+* ask_news
+    - utter_ask_topic
+* inform{"query": "Obama"}
+    - slot{"query": "Obama"}
     - action_get_news
     - action_slot_reset
     - utter_did_that_help
@@ -275,8 +75,264 @@
     - utter_anythingelse
 * affirm
     - utter_ask_whatelse
-* ask_news{"query": "FUNKE AKINDELE"}
-    - slot{"query": "FUNKE AKINDELE"}
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## happy path + satisfied + nothing else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## happy path + satisfied + something else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## sad path + not satisfied + nothing else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## sad path + not satisfied + something else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": false}
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## happy path + satisfied + nothing else + subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": true}
+    - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye
+
+## happy path + satisfied + something else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": true}
+    - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye
+
+## sad path + not satisfied + nothing else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": true}
+    - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye
+
+## sad path + not satisfied + something else + non subscriber
+* greet
+    - utter_greet
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": true}
+    - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* ask_news{"query": "Covid"}
+    - slot{"query": "Covid"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Funke Akindele"}
+    - slot{"query": "Funke Akindele"}
     - action_get_news
     - action_slot_reset
     - utter_did_that_help
@@ -293,51 +349,81 @@
 * deny
     - action_check_subscribe{"subscribed": true}
     - slot{"subscribed": true}
-* thanks
-    - utter_welcome
 * goodbye
     - utter_goodbye
 
-## interactive_story_1
-* greet
-    - utter_greet
-* ask_news{"query": "brazil"}
-    - slot{"query": "brazil"}
+## interactive_story_2
+* ask_news{"query": "DBanj"}
+    - slot{"query": "DBanj"}
     - action_get_news
     - action_slot_reset
     - slot{"query": null}
     - utter_did_that_help
 * affirm
+    - utter_glad_to_help
     - utter_anythingelse
-* goodbye
-    - utter_goodbye
-
-## interactive_story_1
-* ask_news{"query": "Jide Kosoko"}
-    - slot{"query": "Jide Kosoko"}
-    - action_get_news
-    - action_slot_reset
-    - slot{"query": null}
-    - utter_did_that_help
-* chitchat
-    - respond_chitchat
-* goodbye
-    - utter_goodbye
-* ask_subscribe
+* deny
+    - action_check_subscribe
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* affirm
     - action_subscribe
-* chitchat
-    - respond_chitchat
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
 
-## interactive_story_1
-* ask_news{"query": "Larry Page"}
-    - slot{"query": "Larry Page"}
+## ask subscribe
+* greet
+    - utter_greet
+* ask_news{"query": "DBanj"}
+    - slot{"query": "DBanj"}
     - action_get_news
     - action_slot_reset
     - slot{"query": null}
     - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe
+    - slot{"subscribed": false}
+    - utter_ask_subscribe
+* deny
+    - utter_okay
 * goodbye
     - utter_goodbye
-* chitchat
-    - respond_chitchat
-* chitchat
-    - respond_chitchat
+
+## Ask News Negative
+* greet
+    - utter_greet
+* ask_news{"query": "TD Jakes"}
+    - slot{"query": "TD Jakes"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* affirm
+    - utter_ask_whatelse
+* ask_news{"query": "Christmas"}
+    - slot{"query": "Christmas"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* deny
+    - utter_rephrase_your_query
+* ask_news{"query": "Bill Gates"}
+    - slot{"query": "Bill Gates"}
+    - action_get_news
+    - action_slot_reset
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe{"subscribed": true}
+    - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye

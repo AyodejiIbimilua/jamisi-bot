@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Are you a bot?",
+    "intent": "chitchat",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.5905010104179382
+    }
+  }
+]

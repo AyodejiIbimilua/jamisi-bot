@@ -1,6 +1,81 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- okay
+- inform
+- thanks
+- goodbye
+- deny
+- greet
+- affirm
+- ask_news
+- chitchat
+- ask_subscribe
+- reply_greet
+- ask_category
+- bot_challenge
+- out_of_scope
+- chitchat/insult
+- chitchat/who_are_you
+- chitchat/compliment
+- chitchat/who_made_you
+entities:
+- mood_great
+- query
+- return_greet
+- subscribe
+slots:
+  query:
+    type: text
+  subscribed:
+    type: bool
+responses:
+  utter_anythingelse:
+  - text: Do you need anything else?
+  utter_ask_affirmation:
+  - text: Did you mean?
+  utter_ask_rephrase:
+  - text: I am afraid I did'nt understand your request, please rephrase
+  utter_ask_subscribe:
+  - text: Would you like to subscribe for daily news?
+  utter_ask_whatelse:
+  - text: What else would you like to do or know about?
+  utter_default:
+  - text: I am afraid I didn't understand your request, please rephrase
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_glad_to_help:
+  - text: I'm glad I could help
+  utter_goodbye:
+  - text: Bye
+  - text: Later
+  utter_greet:
+  - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
+      What news do you want to know about?"
+  - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
+      news should I give you?"
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_rephrase_your_query:
+  - text: Kindly rephrase your query for me to be able to give you better results.
+  utter_subscribe:
+  - text: You have been succesfully subscribed.
+  utter_url:
+  - text: Read more here:\ {url}
+  utter_welcome:
+  - text: Sure! Anytime
+  - text: You are welcome
+  utter_okay:
+  - text: Alright
+  - text: Okay
+  utter_ask_topic:
+  - text: What topic would you like?
+  utter_help_message:
+  - text: I can assist you in getting current news.
 actions:
+- utter_help_message
 - action_check_subscribe
-- action_default_fallback
 - action_get_news
 - action_slot_reset
 - action_subscribe
@@ -20,70 +95,5 @@ actions:
 - utter_subscribe
 - utter_url
 - utter_welcome
-entities:
-- category
-- country
-- mood_great
-- query
-- return_greet
-- source
-intents:
-- chitchat
-- ask_news
-- goodbye
-- ask_subscribe
-- greet
-- affirm
-- thanks
-- deny
-- reply_greet
-- ask_category
-- bot_challenge
-- out_of_scope
-- chitchat/compliment
-- chitchat/who_are_you
-- chitchat/who_made_you
-- chitchat/insult
-responses:
-  utter_anythingelse:
-  - text: Do you need anything else?
-  utter_ask_affirmation:
-  - text: Did you mean?
-  utter_ask_rephrase:
-  - text: I am afraid I did'nt understand your request, please rephrase
-  utter_ask_subscribe:
-  - text: Would you like to subscribe for daily news?
-  utter_ask_whatelse:
-  - text: What else would you like to do or know about?
-  utter_default:
-  - text: I am afraid I did'nt understand your request, please rephrase
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_glad_to_help:
-  - text: I'm glad I could help
-  utter_goodbye:
-  - text: Bye
-  utter_greet:
-  - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
-      What news do you want to know about?"
-  - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
-      news should I give you?"
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_rephrase_your_query:
-  - text: Kindly rephrase your query for me to be able to give you better results.
-  utter_subscribe:
-  - text: You have been succesfully subscribed.
-  utter_url:
-  - text: Read more here:\ {url}
-  utter_welcome:
-  - text: Sure! Anytime
-  - text: You are welcome
-session_config:
-  carry_over_slots_to_new_session: true
-  session_expiration_time: 60
-slots:
-  query:
-    type: text
-  subscribed:
-    type: bool
+- utter_okay
+- utter_ask_topic

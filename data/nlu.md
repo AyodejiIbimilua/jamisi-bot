@@ -17,6 +17,8 @@
 - see you some other time
 - Talk to you later
 - ok bye
+- talk yo you later
+- Bye
 
 ## intent:affirm
 - yes
@@ -44,6 +46,10 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:okay
+- okay
+- alright
 
 ## intent:ask_news
 - Give me latest news about [bitcoin](query)
@@ -92,10 +98,44 @@
 - I need some [entertaiment news](query)
 - Give me some [health news](query)
 - I want news about [science](query)
-- Give me news about [laptops][query]
+- Give me news about [laptops](query)
 - Give me updates about [brazil](query)
 - I want newws about [Jide Kosoko](query)
 - Give me updates on [Larry Page](query)
+- i want news on [Samsung](query)
+- I want news on [Lenovo](query)
+- I want updates about [[Immam of Peac](query:Immam of Peace)e](query)
+- [Frank Lampard](query)
+- [Dele Odule](query)
+- [Nathaniel Bassey](query)
+- [Victorial Orenze](query)
+- I want news about [Obasanjo](query)
+- I want news on [Trump](query)
+- I want news on [DBanj](query)
+- I want some news
+- I need some news
+- I want news
+- What's the latest update
+- I need news
+- News update
+
+## inform
+- [Boko Haram](query)
+- [Isis](query)
+- [Afe Babalola](query)
+- [Elon Musk](query)
+- [Business News](query)
+- [Abba Kyari](query)
+- [Femi Falana](query)
+- [Ebele Jonathan](query)
+- [US Election](query)
+- [Nigeria Election](query)
+- [World World](query)
+- [Machine learning](query)
+- [Artificial Intelegence](query)
+- [Stephen Hawkings](query)
+- [Home Alone](query)
+- [Money Heist](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -115,6 +155,7 @@
 - Thank you so much
 - Thanks a bunch
 - Thanks a ton
+- thank you
 
 ## intent:ask_category
 - What category can you get me news
@@ -132,6 +173,16 @@
 - How many wives do you have
 - I want to fry yam
 - Get me some water
+- uyrhhffffjf
+- oooiijfnfnfnf
+- jfjfkiweiernn
+- alopeieuejdjandd
+- dpoiuwhdbbdbndnwkqj
+- qkekqjeuuejnn
+- Twinkle Twinkle yam
+- BOUI JUKIAGH
+- OKLAUUWNNDN
+- KWJKJjdjjjdokdo
 
 ## intent:chitchat/compliment
 - You're such a darling
@@ -142,6 +193,8 @@
 - You're intelligent
 - You're beautiful
 - You're sweet
+- I love you
+- I like you
 
 ## intent:chitchat/who_are_you
 - Who are you?
@@ -160,12 +213,6 @@
 - You're crazy
 - You're a fool
 - You are dumb
-
-## intent:chitchat
-- You're mad o
-- That's why I love you
-- You are sweet
-- Who made you?
 
 ## synonym:business
 - finance

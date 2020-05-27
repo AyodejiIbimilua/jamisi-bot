@@ -1,0 +1,26 @@
+[
+  {
+    "text": "i need updates aboutJason Durello",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "Jason Durello",
+        "entity": "query"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want updates about [Immam of Peace](query)",
+    "entities": [
+      {
+        "start": 21,
+        "end": 35,
+        "value": "Immam of Peace",
+        "entity": "query"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

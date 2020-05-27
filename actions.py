@@ -22,6 +22,14 @@ class ActionGetNews(Action):
     def name(self):
         return "action_get_news"
 
+    def slot_mappings(self):
+        return {
+            "query": [
+                self.from_entity(entity="query"),
+                self.from_intent(intent="ask_news")
+            ]
+        }
+
     def run(self, dispatcher, tracker, domain):
 
         url = "https://microsoft-azure-bing-news-search-v1.p.rapidapi.com/search"
@@ -38,26 +46,28 @@ class ActionGetNews(Action):
         pattern = raw_date.strftime("%Y-%m-%d")
         count = len(data["value"])
 
-        if count!=0:
+        if count>0:
             if count > 5:
+                dispatcher.utter_message(text="Here's what I've got for you:\n \n ")
                 for i in range(0, 5):
                     if re.match(pattern, data["value"][i]["datePublished"]):
-                        dispatcher.utter_message(text=data["value"][i]["name"])
-                        dispatcher.utter_message(image=data["value"][i]["image"]["thumbnail"]["contentUrl"])
-                        dispatcher.utter_message(text=data["value"][i]["description"])
-                        dispatcher.utter_message(text="Read more here: "+ data["value"][i]["url"])
+                        # dispatcher.utter_message(text=data["value"][i]["name"])
+                        # dispatcher.utter_message(image=data["value"][i]["image"]["thumbnail"]["contentUrl"])
+                        # dispatcher.utter_message(text=data["value"][i]["description"])
+                        dispatcher.utter_message(text=data["value"][i]["url"])
             else:
+                dispatcher.utter_message(text="Here's what I've got for you:\n \n ")
                 for i in range(0, count):
                     if re.match(pattern, data["value"][i]["datePublished"]):
-                        dispatcher.utter_message(text=data["value"][i]["name"])
-                        dispatcher.utter_message(image=data["value"][i]["image"]["thumbnail"]["contentUrl"])
-                        dispatcher.utter_message(text=data["value"][i]["description"])
-                        dispatcher.utter_message(text="Read more here: "+ data["value"][i]["url"])
-        else:
-            dispatcher.utter_message(text="No news for " + query + " at this moment")
+                        # dispatcher.utter_message(text=data["value"][i]["name"])
+                        # dispatcher.utter_message(image=data["value"][i]["image"]["thumbnail"]["contentUrl"])
+                        # dispatcher.utter_message(text=data["value"][i]["description"])
+                        dispatcher.utter_message(text=data["value"][i]["url"])
+        if count == 0:
+            dispatcher.utter_message(text="No top news for " + query + " at this moment")
         
 
-        return [SlotSet("query", None)]
+        return []
 
 class ActionSlotReset(Action):
     def name(self):
@@ -83,7 +93,7 @@ class ActionCheckSubscribe(Action):
 
     def run(self, dispatcher, tracker, domain):
 
-        subscribed = False
+        subscribe = False
         return[
-            SlotSet("subscribed", subscribed)
+            SlotSet("subscribed", subscribe)
         ]

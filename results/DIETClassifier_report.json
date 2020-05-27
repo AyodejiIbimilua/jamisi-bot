@@ -1,0 +1,38 @@
+{
+  "return_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "mood_great": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "query": {
+    "precision": 1.0,
+    "recall": 0.9294117647058824,
+    "f1-score": 0.9634146341463414,
+    "support": 85
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.967741935483871,
+    "support": 96
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.9764705882352942,
+    "f1-score": 0.9878048780487805,
+    "support": 96
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.9375,
+    "f1-score": 0.9676067073170732,
+    "support": 96
+  }
+}

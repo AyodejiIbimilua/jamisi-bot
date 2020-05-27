@@ -17,16 +17,18 @@ pipeline:
     epochs: 150
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 100
+    epochs: 150
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
-  - name: AugmentedMemoizationPolicy
+  - name: MemoizationPolicy
   - name: MappingPolicy
   - name: FormPolicy
   - name: TEDPolicy
+    epochs: 100
+    max_history: 4
   - name: FallbackPolicy
     nlu_threshold: 0.4
-    core_threshold: 0.4
+    core_threshold: 0.3
     fallback_action_name: "action_default_fallback"
