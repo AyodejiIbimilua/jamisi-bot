@@ -6,4 +6,3 @@
 *.db
 *.db-wal
 *.db-shm
-models/
