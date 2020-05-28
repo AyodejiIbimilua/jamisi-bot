@@ -16,10 +16,6 @@ intents:
 - ask_category
 - bot_challenge
 - out_of_scope
-- chitchat/insult
-- chitchat/who_are_you
-- chitchat/compliment
-- chitchat/who_made_you
 entities:
 - mood_great
 - query
