@@ -118,6 +118,8 @@
 - What's the latest update
 - I need news
 - News update
+- Can you give me today's news?
+- Can you give me current news?
 
 ## inform
 - [Boko Haram](query)
@@ -136,6 +138,17 @@
 - [Stephen Hawkings](query)
 - [Home Alone](query)
 - [Money Heist](query)
+- [Femi Adebayo](query)
+- [Odunlade Adekola](query)
+- [Sola Adeleye](query)
+- [Barcelona](query)
+- [Athletico Madrid](query)
+- [Chelsea](query)
+- [Arsenal](query)
+- [Chris Mike](query)
+- [Davido](query)
+- [Wizkid](query)
+- [PSG](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -183,6 +196,8 @@
 - BOUI JUKIAGH
 - OKLAUUWNNDN
 - KWJKJjdjjjdokdo
+- OWJJVNDNNCNNCVN
+- KCNDNWNCDWNCNNCN
 
 ## intent:chitchat/compliment
 - You're such a darling
