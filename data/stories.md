@@ -21,6 +21,7 @@
 ## okay
 * okay
     - utter_okay
+
 ## out of scope
 * out_of_scope
     - action_default_fallback
@@ -425,5 +426,25 @@
 * deny
     - action_check_subscribe{"subscribed": true}
     - slot{"subscribed": true}
+* goodbye
+    - utter_goodbye
+
+## New Story
+
+* ask_news{"ORG":"Buhari","query":"Buhari"}
+    - slot{"query":"Buhari"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* deny
+    - action_check_subscribe
+    - slot{"subscribed":false}
+    - utter_ask_subscribe
+* affirm
+    - action_subscribe
 * goodbye
     - utter_goodbye

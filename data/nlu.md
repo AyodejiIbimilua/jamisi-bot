@@ -8,6 +8,9 @@
 - hello jamisi
 - hiii
 - hey buddy
+- Hi
+- Hello
+- Hey
 
 ## intent:goodbye
 - bye
@@ -32,6 +35,7 @@
 - Yes, it did
 - sure
 - yes oo
+- Yes
 
 ## intent:deny
 - no
@@ -40,6 +44,8 @@
 - don't like that
 - no way
 - not really
+- No
+- Nope
 
 ## intent:bot_challenge
 - are you a bot?
@@ -50,6 +56,7 @@
 ## intent:okay
 - okay
 - alright
+- Okay
 
 ## intent:ask_news
 - Give me latest news about [bitcoin](query)
@@ -104,7 +111,7 @@
 - Give me updates on [Larry Page](query)
 - i want news on [Samsung](query)
 - I want news on [Lenovo](query)
-- I want updates about [[Immam of Peac](query:Immam of Peace)e](query)
+- I want updates about [[Immam of Peac]{"entity": "query", "value": "Immam of Peace"}e](query)
 - [Frank Lampard](query)
 - [Dele Odule](query)
 - [Nathaniel Bassey](query)
@@ -120,8 +127,6 @@
 - News update
 - Can you give me today's news?
 - Can you give me current news?
-
-## inform
 - [Boko Haram](query)
 - [Isis](query)
 - [Afe Babalola](query)
@@ -149,6 +154,12 @@
 - [Davido](query)
 - [Wizkid](query)
 - [PSG](query)
+- I need news about [Buhari](query)
+- I want news about [Ekiti State](query)[Ekiti](query) State
+- [Recurrent neural network](query)[neural](query) network [speech recognition](query)[recognition](query)
+- give me news about [malaria](query)
+- [Racism in America](query)[Racism](query) in [America](query)
+- Tell me something about [John](query)[John Doe](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -228,6 +239,17 @@
 - You're crazy
 - You're a fool
 - You are dumb
+
+## intent:user_ask_name
+- What's my name
+- Type my name
+- My name
+
+## intent:weldone
+- Well done
+
+## synonym:Immam of Peace
+- [Immam of Peac
 
 ## synonym:business
 - finance

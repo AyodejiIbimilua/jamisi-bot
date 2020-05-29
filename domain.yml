@@ -16,11 +16,18 @@ intents:
 - ask_category
 - bot_challenge
 - out_of_scope
+- chitchat/who_are_you
+- chitchat/compliment
+- chitchat/insult
+- chitchat/who_made_you
+- user_ask_name
+- weldone
 entities:
 - mood_great
 - query
 - return_greet
 - subscribe
+- ORG
 slots:
   query:
     type: text
@@ -49,8 +56,8 @@ responses:
   utter_greet:
   - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
       What news do you want to know about?"
-  - text: Hello, I am Jamisi, I can gist you about happenings arround the world. What
-      news should I give you?"
+  - text: Hello, I am Jamisi, I can gist you about happenings around the world. What
+      news should I give you?
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_rephrase_your_query:
