@@ -22,6 +22,7 @@
 - ok bye
 - talk yo you later
 - Bye
+- See ya
 
 ## intent:affirm
 - yes
@@ -112,7 +113,6 @@
 - Give me updates on [Larry Page](query)
 - i want news on [Samsung](query)
 - I want news on [Lenovo](query)
-- I want updates about [[Immam of Peac]{"entity": "query", "value": "Immam of Peace"}e](query)
 - [Frank Lampard](query)
 - [Dele Odule](query)
 - [Nathaniel Bassey](query)
@@ -169,7 +169,7 @@
 - [Sport](query)
 - [tech]{"entity": "query", "value": "technology"}[tech](PERSON)
 - can you recommend me some new [york times](query) articles
-- okay [NYT](query) articles related to [technology](PERSON)[technology](query)
+- okay [NYT](query) articles related to [technology](query)
 - About [ios](query)
 - About [corona](query)
 - [Corona](query)
@@ -181,6 +181,13 @@
 - Subscribe me, please
 - I would like to subscribe
 - Subdcribe me for news update
+
+## intent:ask_name
+- What's your name?
+- Your name
+- Tell me your name
+- Do you have a name
+- Can I know your name
 
 ## intent:thanks
 - Thanks
@@ -194,15 +201,6 @@
 - Thanks a ton
 - thank you
 - Good work here ..thanks
-
-## intent:ask_category
-- What category can you get me news
-- from what category can i choose from
-- What sections of news do you offer
-
-## intent:reply_greet
-- [I am good](mood_great), [what about you?](return_greet)
-- [I'am good](mood_great), [you?](return_greet)
 
 ## intent:out_of_scope
 - I want to book a taxi
@@ -223,6 +221,7 @@
 - KWJKJjdjjjdokdo
 - OWJJVNDNNCNNCVN
 - KCNDNWNCDWNCNNCN
+- What is the time?
 
 ## intent:chitchat/compliment
 - You're such a darling
@@ -259,14 +258,11 @@
 - What's my name
 - Type my name
 - My name
-- What's your name?
-- Your name
+
 
 ## intent:weldone
 - Well done
 
-## synonym:Immam of Peace
-- [Immam of Peac
 
 ## synonym:business
 - finance

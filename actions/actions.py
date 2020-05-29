@@ -63,7 +63,7 @@ class ActionGetNews(Action):
                         # dispatcher.utter_message(image=data["value"][i]["image"]["thumbnail"]["contentUrl"])
                         # dispatcher.utter_message(text=data["value"][i]["description"])
                         dispatcher.utter_message(text=data["value"][i]["url"])
-        if count == 0:
+        else:
             dispatcher.utter_message(text="No top news for " + query + " at this moment")
         
 

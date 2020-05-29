@@ -12,8 +12,6 @@ intents:
 - ask_news
 - chitchat
 - ask_subscribe
-- reply_greet
-- ask_category
 - bot_challenge
 - out_of_scope
 - chitchat/who_are_you
@@ -22,12 +20,11 @@ intents:
 - chitchat/who_made_you
 - user_ask_name
 - weldone
+- ask_name
 entities:
-- mood_great
 - query
 - return_greet
 - subscribe
-- ORG
 slots:
   query:
     type: text
@@ -76,6 +73,10 @@ responses:
   - text: What topic would you like?
   utter_help_message:
   - text: I can assist you in getting current news.
+  utter_name:
+  - text: My name is Jamisi, people call me Jammy
+  utter_my_name:
+  - text: I don't know your name, can you please inform me.
 actions:
 - utter_help_message
 - action_check_subscribe

@@ -22,6 +22,14 @@
 * okay
     - utter_okay
 
+## your name
+* ask_name
+    - utter_name
+
+## user asks name
+* user_ask_name
+    - utter_my_name
+
 ## out of scope
 * out_of_scope
     - action_default_fallback

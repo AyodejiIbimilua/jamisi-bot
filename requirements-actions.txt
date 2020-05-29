@@ -1,4 +1,1 @@
-
-requests==2.23.0
-requests-oauthlib==1.3.0
-requests-toolbelt==0.9.1
+http://34.89.37.249/guest/conversations/production/7467323acf104c59958a15aa10b8b243
