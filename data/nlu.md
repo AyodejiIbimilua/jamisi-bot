@@ -57,6 +57,7 @@
 - okay
 - alright
 - Okay
+- Ok
 
 ## intent:ask_news
 - Give me latest news about [bitcoin](query)
@@ -155,11 +156,23 @@
 - [Wizkid](query)
 - [PSG](query)
 - I need news about [Buhari](query)
-- I want news about [Ekiti State](query)[Ekiti](query) State
+- I want news about [Ekiti](query)[Ekiti State](query)
 - [Recurrent neural network](query)[neural](query) network [speech recognition](query)[recognition](query)
 - give me news about [malaria](query)
 - [Racism in America](query)[Racism](query) in [America](query)
 - Tell me something about [John](query)[John Doe](query)
+- [Python algorithm and data structures](query)
+- [Python](query)
+- [America](query)
+- I want news about [Michael Jackson](query)
+- [Corona virus](query)
+- [Sport](query)
+- [tech]{"entity": "query", "value": "technology"}[tech](PERSON)
+- can you recommend me some new [york times](query) articles
+- okay [NYT](query) articles related to [technology](PERSON)[technology](query)
+- About [ios](query)
+- About [corona](query)
+- [Corona](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -180,6 +193,7 @@
 - Thanks a bunch
 - Thanks a ton
 - thank you
+- Good work here ..thanks
 
 ## intent:ask_category
 - What category can you get me news
@@ -227,6 +241,7 @@
 - Are you a bot?
 - Tell me about yourself
 - Tell me about you
+- What are you
 
 ## intent:chitchat/who_made_you
 - Who made you?
@@ -244,6 +259,8 @@
 - What's my name
 - Type my name
 - My name
+- What's your name?
+- Your name
 
 ## intent:weldone
 - Well done
