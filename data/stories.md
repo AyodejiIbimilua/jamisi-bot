@@ -30,13 +30,13 @@
 * user_ask_name
     - utter_my_name
 
-## out of scope
+<!-- ## out of scope
 * out_of_scope
     - action_default_fallback
 * out_of_scope
     - action_default_fallback
 * out_of_scope
-    - utter_help_message
+    - utter_help_message -->
 
 ## Ask news without query
 * greet

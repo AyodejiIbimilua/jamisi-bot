@@ -59,6 +59,7 @@
 - alright
 - Okay
 - Ok
+- okies
 
 ## intent:ask_news
 - Give me latest news about [bitcoin](query)
@@ -128,6 +129,25 @@
 - News update
 - Can you give me today's news?
 - Can you give me current news?
+- I need news about [Buhari](query)
+- I want news about [Ekiti](query)[Ekiti State](query)
+- [Recurrent neural network](query)[neural](query) network [speech recognition](query)[recognition](query)
+- give me news about [malaria](query)
+- [Racism in America](query)[Racism](query) in [America](query)
+- Tell me something about [John Doe](query)
+- [Data structures](query)
+- I want news about [Michael Jackson](query)
+- okay [NYT](query) articles related to [technology](query)
+- [Python algorithms](query)
+
+## intent:inform
+- [Python](query)
+- [America](query)
+- [Corona virus](query)
+- [Sports](query)
+- About [ios](query)
+- About [corona](query)
+- [Corona](query)
 - [Boko Haram](query)
 - [Isis](query)
 - [Afe Babalola](query)
@@ -155,24 +175,15 @@
 - [Davido](query)
 - [Wizkid](query)
 - [PSG](query)
-- I need news about [Buhari](query)
-- I want news about [Ekiti](query)[Ekiti State](query)
-- [Recurrent neural network](query)[neural](query) network [speech recognition](query)[recognition](query)
-- give me news about [malaria](query)
-- [Racism in America](query)[Racism](query) in [America](query)
-- Tell me something about [John](query)[John Doe](query)
-- [Python algorithm and data structures](query)
-- [Python](query)
-- [America](query)
-- I want news about [Michael Jackson](query)
-- [Corona virus](query)
-- [Sport](query)
-- [tech]{"entity": "query", "value": "technology"}[tech](PERSON)
-- can you recommend me some new [york times](query) articles
-- okay [NYT](query) articles related to [technology](query)
-- About [ios](query)
-- About [corona](query)
-- [Corona](query)
+- on [Nigeria budget](query)
+- on [U.S budget](query)
+- on [Nigerian Police](query)
+- about [Korean Police](query)
+- on [Father's day](query)
+- on [Mothers's day](query)
+- on [Childrens's day](query)
+- on [International Women's day](query)
+- on [Valentine's day](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -201,27 +212,6 @@
 - Thanks a ton
 - thank you
 - Good work here ..thanks
-
-## intent:out_of_scope
-- I want to book a taxi
-- I want to order for pizza
-- What cusine do you have
-- How many wives do you have
-- I want to fry yam
-- Get me some water
-- uyrhhffffjf
-- oooiijfnfnfnf
-- jfjfkiweiernn
-- alopeieuejdjandd
-- dpoiuwhdbbdbndnwkqj
-- qkekqjeuuejnn
-- Twinkle Twinkle yam
-- BOUI JUKIAGH
-- OKLAUUWNNDN
-- KWJKJjdjjjdokdo
-- OWJJVNDNNCNNCVN
-- KCNDNWNCDWNCNNCN
-- What is the time?
 
 ## intent:chitchat/compliment
 - You're such a darling
@@ -258,11 +248,12 @@
 - What's my name
 - Type my name
 - My name
-
+- Do you know my name?
+- Can you guess my name?
 
 ## intent:weldone
 - Well done
-
+- Good Job
 
 ## synonym:business
 - finance

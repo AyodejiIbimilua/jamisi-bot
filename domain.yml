@@ -13,7 +13,6 @@ intents:
 - chitchat
 - ask_subscribe
 - bot_challenge
-- out_of_scope
 - chitchat/who_are_you
 - chitchat/compliment
 - chitchat/insult
@@ -51,10 +50,8 @@ responses:
   - text: Bye
   - text: Later
   utter_greet:
-  - text: Hey! My name is Jamisi, I can give you gists as they happen around the world.
-      What news do you want to know about?"
-  - text: Hello, I am Jamisi, I can gist you about happenings around the world. What
-      news should I give you?
+  - text: "Hey! My name is Jamisi, I can give you gists as they happen around the world. \nWhat news do you want to know about?"
+  - text: "Hello, I am Jamisi, I can gist you about happenings around the world. \nWhat news should I give you?"
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_rephrase_your_query:
