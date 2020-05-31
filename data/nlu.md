@@ -267,7 +267,7 @@
 - You're crazy
 - You're a fool
 - You are dumb
-- get [lost](query)
+- get lost
 
 ## intent:user_ask_name
 - What's my name

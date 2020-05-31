@@ -12,13 +12,14 @@ intents:
 - ask_news
 - ask_subscribe
 - bot_challenge
-- chitchat/who_are_you
-- chitchat/compliment
-- chitchat/insult
-- chitchat/who_made_you
+- chitchat
 - user_ask_name
 - weldone
 - ask_name
+- chitchat/who_are_you
+- chitchat/insult
+- chitchat/who_made_you
+- chitchat/compliment
 entities:
 - query
 - subscribe

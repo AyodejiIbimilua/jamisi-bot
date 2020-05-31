@@ -439,7 +439,7 @@
 
 ## New Story
 
-* ask_news{"ORG":"Buhari","query":"Buhari"}
+* ask_news{"query":"Buhari"}
     - slot{"query":"Buhari"}
     - action_get_news
     - action_slot_reset
