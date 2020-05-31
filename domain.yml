@@ -10,7 +10,6 @@ intents:
 - greet
 - affirm
 - ask_news
-- chitchat
 - ask_subscribe
 - bot_challenge
 - chitchat/who_are_you
@@ -22,7 +21,6 @@ intents:
 - ask_name
 entities:
 - query
-- return_greet
 - subscribe
 slots:
   query:
@@ -50,8 +48,10 @@ responses:
   - text: Bye
   - text: Later
   utter_greet:
-  - text: "Hey! My name is Jamisi, I can give you gists as they happen around the world. \nWhat news do you want to know about?"
-  - text: "Hello, I am Jamisi, I can gist you about happenings around the world. \nWhat news should I give you?"
+  - text: "Hey! My name is Jamisi, I can give you gists as they happen around the\
+      \ world. \nWhat news do you want to know about?"
+  - text: "Hello, I am Jamisi, I can gist you about happenings around the world. \n\
+      What news should I give you?"
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_rephrase_your_query:
@@ -98,3 +98,5 @@ actions:
 - utter_welcome
 - utter_okay
 - utter_ask_topic
+- utter_name
+- utter_my_name

@@ -11,6 +11,8 @@
 - Hi
 - Hello
 - Hey
+- HI
+- Hey man
 
 ## intent:goodbye
 - bye
@@ -23,6 +25,8 @@
 - talk yo you later
 - Bye
 - See ya
+- I will talk to you later
+- later
 
 ## intent:affirm
 - yes
@@ -47,12 +51,15 @@
 - not really
 - No
 - Nope
+- that didnt help me
+- Not now
 
 ## intent:bot_challenge
 - are you a bot?
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+- Who are you?
 
 ## intent:okay
 - okay
@@ -139,6 +146,18 @@
 - I want news about [Michael Jackson](query)
 - okay [NYT](query) articles related to [technology](query)
 - [Python algorithms](query)
+- Aso Rock
+- Tell me about [Lagos](query) State
+- Give me news on [London](query)
+- I want news about [Ekiti](query) State
+- [Racism in America](query)[Racism](query) in [America](query)
+- [Sport](query)
+- can you recommend me some new [york times](query) articles
+- I want news about [corona virus](query)
+- [corona virus](query) in [Nigeria](query)
+- ekiti state news
+- Give me news about NCDC
+- i want news on [Malaria](query)
 
 ## intent:inform
 - [Python](query)
@@ -184,6 +203,10 @@
 - on [Childrens's day](query)
 - on [International Women's day](query)
 - on [Valentine's day](query)
+- [China](query)
+- Ekiti
+- [NCDC](query)
+- [Artificial Intelligence](query)
 
 ## intent:ask_subscribe
 - I want to subscribe for daily news
@@ -224,9 +247,9 @@
 - You're sweet
 - I love you
 - I like you
+- i love you
 
 ## intent:chitchat/who_are_you
-- Who are you?
 - Are you a bot?
 - Tell me about yourself
 - Tell me about you
@@ -236,6 +259,7 @@
 - Who made you?
 - Who created you?
 - Who built you?
+- who made you
 
 ## intent:chitchat/insult
 - You're stupid
@@ -243,6 +267,7 @@
 - You're crazy
 - You're a fool
 - You are dumb
+- get [lost](query)
 
 ## intent:user_ask_name
 - What's my name

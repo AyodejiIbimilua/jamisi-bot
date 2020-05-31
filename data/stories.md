@@ -456,3 +456,63 @@
     - action_subscribe
 * goodbye
     - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* inform{"query":"China"}
+    - slot{"query":"China"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
+* bot_challenge
+    - utter_iamabot
+* okay
+    - utter_okay
+* goodbye
+    - utter_goodbye
+* chitchat
+    - respond_chitchat
+* ask_news{"query":"Lagos"}
+    - slot{"query":"Lagos"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* ask_news{"query":"London"}
+    - slot{"query":"London"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
+    - slot{"query":"China"}
+    - slot{"query":"Lagos"}
+    - slot{"query":"London"}
+* affirm
+    - utter_glad_to_help
+    - utter_anythingelse
+* goodbye
+    - utter_goodbye
+
+## New Story
+
+* ask_news{"query":"Malaria"}
+    - slot{"query":"Malaria"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
+
+## New Story
+
+* inform{"query":"Artificial Intelligence"}
+    - slot{"query":"Artificial Intelligence"}
+    - action_get_news
+    - action_slot_reset
+    - slot{"query":null}
+    - utter_did_that_help
