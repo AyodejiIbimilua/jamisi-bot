@@ -253,7 +253,8 @@
 - Are you a bot?
 - Tell me about yourself
 - Tell me about you
-- What are you
+- What are you?
+- who are you?
 
 ## intent:chitchat/who_made_you
 - Who made you?
