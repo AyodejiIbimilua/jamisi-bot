@@ -13,6 +13,9 @@
 - Hey
 - HI
 - Hey man
+- Hi there
+- Good afternoon
+- Hi Jamisi
 
 ## intent:goodbye
 - bye
@@ -27,6 +30,8 @@
 - See ya
 - I will talk to you later
 - later
+- See you
+- Bye bye
 
 ## intent:affirm
 - yes
@@ -53,6 +58,7 @@
 - Nope
 - that didnt help me
 - Not now
+- Not at all
 
 ## intent:bot_challenge
 - are you a bot?
